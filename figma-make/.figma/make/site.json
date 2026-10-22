@@ -1,0 +1,10 @@
+{
+  "description": "This web application facilitates collaborative brainstorming and ideation, enabling teams to generate, organize, and refine creative ideas efficiently.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

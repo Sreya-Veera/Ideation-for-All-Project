@@ -46,6 +46,11 @@ io.on("connection", (socket) => {
     await Note.updateMany({ _id: { $in: noteIds } }, { groupId });
     io.to(boardId).emit("notes-grouped", { noteIds, groupId });
   });
+
+  socket.on("delete-note", async ({ id, boardId }) => {
+    await Note.findByIdAndDelete(id);
+    io.to(boardId).emit("note-deleted", { id });
+  });
 });
 
 const PORT = process.env.PORT || 4000;

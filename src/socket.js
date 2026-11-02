@@ -1,3 +1,4 @@
 import { io } from "socket.io-client";
+import { API } from "./api";
 
-export const socket = io("https://ideation-for-all-project-4.onrender.com");
+export const socket = io(API);

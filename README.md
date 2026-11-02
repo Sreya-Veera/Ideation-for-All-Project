@@ -17,6 +17,7 @@ Client → server
 - move-note    { id, x, y, boardId }                  → broadcasts "note-moved"
 - vote         { id, boardId }                        → broadcasts "note-updated"
 - group-notes  { noteIds, groupId, boardId }          → broadcasts "notes-grouped"
+- delete-note  { id, boardId }                         → broadcasts "note-deleted" { id }
 
 Note: boardId is the board's "code".
 Env vars: MONGO_URI, CLIENT_URL (must match the frontend's origin for CORS).
